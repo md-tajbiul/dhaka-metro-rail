@@ -1,0 +1,13 @@
+.bgBody
+{
+    background: url(../images/bg.jpg);
+    min-height: 93.3vh;
+    background-position: center;
+    background-size: cover;
+}
+.blog
+{
+    text-align: center;
+    color: rgb(0, 255, 0);
+    padding-top: 50px;
+}

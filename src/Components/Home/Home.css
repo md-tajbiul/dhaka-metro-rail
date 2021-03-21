@@ -1,0 +1,21 @@
+.bgBody
+{
+    background: url(../images/bg.jpg);
+    min-height: 93.3vh;
+    background-position: center;
+    background-size: cover;
+}
+.cartStyle h1
+{
+    color: white;
+    padding-top: 100px;
+}
+.cartStyle h2
+{
+    color: white;
+    padding-bottom: 30px;
+}
+.cartStyle
+{
+    text-align: center;
+}

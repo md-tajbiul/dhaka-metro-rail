@@ -1,0 +1,35 @@
+.bgBody
+{
+    background: url(../images/bg.jpg);
+    min-height: 93.3vh;
+    background-position: center;
+    background-size: cover;
+}
+.textWhite
+{
+    color: white;
+}
+.form
+{
+    padding-top: 50px;
+}
+.icons
+{
+    text-align: center;
+}
+.icons p
+{
+    color: white;
+}
+.iconStyle
+{   
+    cursor: pointer;
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+    color: white;
+}
+.iconStyle:hover
+{
+    color: rgb(105, 105, 248);
+}
