@@ -11,3 +11,4 @@ This project is live on Netlify. [Click Me, I am Live](https://dhaka-metro-rail.
 * Email, Password Sign in
 * Date For Journey
 
+### It's a react authentication project, It was very amazing & learning to me. I got much knowledge from this project. I think it's a important milestone for my journey. STAY SAFE. THANK YOU! 
