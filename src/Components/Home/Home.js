@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import fakeData from '../../Data/fakeData.json'
-import Map from '../Map/Map';
 import './Home.css'
 
 const Home = () => {
@@ -20,12 +19,11 @@ const Home = () => {
             {
             cart.map(cart => 
                 <div className="col-md-3" key={cart.id}>
-                <Card border="light" bg='secondary' className="mb-3" style={{height:'300px'}}>
+                <Card border="light" bg='secondary' className="mb-3" style={{height:'280px'}}>
                 <Card.Body>
-                    <Card.Text><img src={cart.image} alt=''/></Card.Text>
-                    <Card.Text><h3 style={{color:"white", marginTop:'-10px'}}>{cart.type}</h3></Card.Text>
+                    <Card.Text><h3 style={{color:"white"}}>{cart.name}</h3></Card.Text>
                     <Card.Text><p style={{color:"white"}}>{cart.description}</p></Card.Text>
-                <Button style={{marginBottom:'15px'}} variant="light"><Link to="/destination">BUY NOW</Link></Button>
+                <Button variant="light"><Link to={`/destination/${cart.type}`}>BUY NOW</Link></Button>
                 </Card.Body>
                 <Card.Footer><h4 style={{marginTop:'-5px', marginBottom:'-3px', color:"white"}}>{cart.price}</h4></Card.Footer>
                 </Card>
