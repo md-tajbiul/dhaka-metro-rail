@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import fakeData from '../../Data/fakeData.json'
+import Map from '../Map/Map';
 import './Home.css'
 
 const Home = () => {

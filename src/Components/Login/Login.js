@@ -40,16 +40,18 @@ const Login = () => {
   .auth()
   .signInWithPopup(fbProvider)
   .then((result) => {
-    console.log(result)
+    const newUser = {...user};
+    newUser.error = '';
+    newUser.creationSuccess = true;  
     const {displayName, email} = result.user;
     const signedInUser = {name: displayName, email};
     setLoggedInUser(signedInUser);
     history.replace(from);
   })
   .catch((error) => {
-    var errorCode = error.code;
     var errorMessage = error.message;
-    console.log(errorCode, errorMessage);
+    const newUser = {...user};
+    newUser.error = errorMessage;
   });
     }
     const handleGoogleSignIn = () => {
@@ -57,15 +59,17 @@ const Login = () => {
         firebase.auth()
   .signInWithPopup(googleProvider)
   .then((result) => {
-      console.log(result)
+    const newUser = {...user};
+    newUser.error = '';
+    newUser.creationSuccess = true;
     const {displayName, email} = result.user;
     const signedInUser = {name: displayName, email};
     setLoggedInUser(signedInUser);
     history.replace(from);
   }).catch((error) => {
-    var errorCode = error.code;
     var errorMessage = error.message;
-    console.log(errorCode, errorMessage);
+    const newUser = {...user};
+    newUser.error = errorMessage;
   });
     }
     const handleGithubSignIn = () => {
@@ -73,15 +77,17 @@ const Login = () => {
         firebase.auth()
   .signInWithPopup(githubProvider)
   .then((result) => {
-    console.log(result)
+    const newUser = {...user};
+    newUser.error = '';
+    newUser.creationSuccess = true;
     const {displayName, email} = result.user;
     const signedInUser = {name: displayName, email};
     setLoggedInUser(signedInUser);
     history.replace(from);
   }).catch((error) => {
-    var errorCode = error.code;
     var errorMessage = error.message;
-    console.log(errorCode, errorMessage);
+    const newUser = {...user};
+    newUser.error = errorMessage;
   });
     }
     const errorHandler = (errorField, errorMessage) => {
@@ -122,7 +128,9 @@ const Login = () => {
             newUser.error = '';
             newUser.creationSuccess = true;
             setUser(newUser);
-            setLoggedInUser(res.user);
+            const {displayName, email} = res.user;
+            const signedInUser = {name: displayName, email};
+            setLoggedInUser(signedInUser);
             history.replace(from);
         })
         .catch(error => {
@@ -139,7 +147,9 @@ const Login = () => {
             newUser.error = '';
             newUser.creationSuccess = true;
             setUser(newUser);
-            setLoggedInUser(res.user);
+            const {displayName, email} = res.user;
+            const signedInUser = {name: displayName, email};
+            setLoggedInUser(signedInUser);
             history.replace(from);
         })
         .catch((error) => {
